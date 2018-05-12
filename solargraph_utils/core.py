@@ -26,7 +26,7 @@ class Server:
     def start(self):
         env = os.environ.copy()
         self.proc = subprocess.Popen(
-            [self.command, 'server', *self.args],
+            [self.command, 'socket', *self.args],
             env=env,
             stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE,
